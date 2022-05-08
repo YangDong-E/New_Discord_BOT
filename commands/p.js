@@ -34,6 +34,9 @@ module.exports = {
                 };
             } else {
                 // If the video is not a URL then use keywords to find that video
+                // 현재 : 키워드만 사용 가능
+                // 해결 방법 : split 사용해서 재생 부분 제외 링크 사용? 해서 링크만 추출해서 재생하게 해결
+                // 2022.05.08 해결하려했지만 실패
                 const video_finder = async (query) => {
                     const videoResult = await ytSearch(query);
                     return videoResult.videos.length > 1
